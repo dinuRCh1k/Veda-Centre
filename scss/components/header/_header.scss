@@ -1,0 +1,250 @@
+@import '../../cta';
+@import '../../mixins';
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+.header {
+    .container {
+        .nav {
+            display: flex;
+            align-items: center;
+
+            margin-top: 0.8rem;
+
+            @include respond-to('phone') {
+                margin-top: 1rem;
+            }
+
+            .nav-right {
+                margin-left: 1.5rem;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                width: 100%;
+
+                .nav-list {
+                    display: flex;
+                    column-gap: 2.3rem;
+
+                    li {
+                        a {
+                            color: $clr-dark-blue;
+                            font-size: $font-size-l;
+                            font-family: "Oswald", sans-serif;
+                            transition: $transition-fast;
+                            text-transform: uppercase;
+                            -webkit-transition: $transition-fast;
+                            -moz-transition: $transition-fast;
+                            -ms-transition: $transition-fast;
+                            -o-transition: $transition-fast;
+
+                            &:hover {
+                                color: $clr-light-blue;
+                            }
+
+                            &:active {
+                                @include click();
+                            }
+                        }
+                    }
+                }
+
+                .search {
+                    width: 46.3rem;
+                    height: 4.6rem;
+                    border-radius: 0.3rem;
+                    -webkit-border-radius: 0.3rem;
+                    -moz-border-radius: 0.3rem;
+                    -ms-border-radius: 0.3rem;
+                    -o-border-radius: 0.3rem;
+                    transition: $transition-fast;
+                    -webkit-transition: $transition-fast;
+                    -moz-transition: $transition-fast;
+                    -ms-transition: $transition-fast;
+                    -o-transition: $transition-fast;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    padding: 1.2rem;
+
+                    font-size: $font-size-m;
+
+                    background-color: $clr-white-header;
+
+                    input {
+                        width: 80%;
+                    }
+
+                    i {
+                        font-size: $font-size-m;
+                        color: $clr-dark-blue;
+                        cursor: pointer;
+                    }
+
+                    &:hover {
+                        transform: scale(1.02);
+                        -webkit-transform: scale(1.02);
+                        -moz-transform: scale(1.02);
+                        -ms-transform: scale(1.02);
+                        -o-transform: scale(1.02);
+                    }
+
+                    &:active {
+                        transform: scale(0.97);
+                        -webkit-transform: scale(0.97);
+                        -moz-transform: scale(0.97);
+                        -ms-transform: scale(0.97);
+                        -o-transform: scale(0.97);
+                    }
+                }
+
+                .nav-social {
+                    display: flex;
+                    column-gap: 2.3rem;
+
+                    a {
+                        font-size: 2.6rem;
+
+                        i {
+                            color: $clr-dark-blue;
+                            transition: $transition-fast;
+                            -webkit-transition: $transition-fast;
+                            -moz-transition: $transition-fast;
+                            -ms-transition: $transition-fast;
+                            -o-transition: $transition-fast;
+
+                            &:hover {
+                                color: $clr-light-blue;
+                            }
+
+                            &:active {
+                                @include click();
+                            }
+                        }
+                    }
+                }
+                
+                .line-header{
+                    width: 65%;
+                    height: 0.1rem;
+                    position: absolute;
+                    background-color: $clr-dark-blue;
+                    top: 7rem;
+                    @include respond-to('phone'){
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .header {
+        .container {
+            .nav {
+                .nav-logo {
+                    a {
+                        img {
+                            display: none;
+                        }
+
+                        .none {
+                            display: block;
+                            position: absolute;
+                            top: 1rem;
+                        }
+                    }
+                }
+
+                .nav-right {
+                    .search {
+                        display: none;
+                    }
+
+                    .nav-list {
+                        display: none;
+                    }
+
+                    .nav-social {
+                        margin-left: 10.2rem;
+                        margin-top: 0.3rem;
+                        font-size: 2rem;
+                    }
+
+                    .nav-mobile {
+                        display: block;
+
+                        .hamburger-menu {
+                            display: none;
+
+                            &:checked ~ .nav-2 {
+                                display: block;
+                                position: absolute;
+                                left: 0;
+                                top: 6rem;
+                                width: 100vw;
+                                height: 25.5rem;
+                                background: #F0F0F0;
+                                text-align: center;
+
+                                li {
+                                    padding: 2rem;
+
+                                    &:first-child {
+                                        border-top: 0.1rem solid $clr-dark-blue;
+                                    }
+
+                                    border-bottom: 0.1rem solid $clr-dark-blue;
+
+                                    &:last-child {
+                                        border: none;
+                                    }
+
+                                    a {
+                                        color: $clr-dark-blue;
+                                        font-family: "Oswald", sans-serif;
+                                        font-size: 1.5rem;
+                                        line-height: 1.7rem;
+                                        text-transform: uppercase;
+                                        transition: $transition-fast;
+                                        -webkit-transition: $transition-fast;
+                                        -moz-transition: $transition-fast;
+                                        -ms-transition: $transition-fast;
+                                        -o-transition: $transition-fast;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .hamburger {
+                        width: 2.2rem;
+                        height: 1.6rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        span {
+                            width: 100%;
+                            height: 0.2rem;
+                            display: block;
+                            background-color: $clr-dark-blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
