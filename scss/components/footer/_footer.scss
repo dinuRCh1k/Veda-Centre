@@ -1,0 +1,220 @@
+@import '../../cta';
+@import '../../mixins';
+
+.footer {
+    margin-top: 6.7rem;
+
+    .footer__top {
+        background-color: $clr-dark-blue;
+
+        height: 7.2rem;
+
+        .nav {
+            @include flex-row();
+            padding-top: 0.8rem;
+
+            .nav-list {
+                display: flex;
+                column-gap: 2.3rem;
+
+                li {
+                    a {
+                        color: $clr-white;
+                        font-size: $font-size-l;
+                        font-family: "Oswald", sans-serif;
+                        transition: $transition-fast;
+                        text-transform: uppercase;
+                        -webkit-transition: $transition-fast;
+                        -moz-transition: $transition-fast;
+                        -ms-transition: $transition-fast;
+                        -o-transition: $transition-fast;
+
+                        &:hover {
+                            color: $clr-light-blue;
+                        }
+
+                        &:active {
+                            @include click();
+                        }
+                    }
+                }
+            }
+
+            .nav-social {
+                display: flex;
+                column-gap: 2.3rem;
+
+                a {
+                    font-size: 2.6rem;
+
+                    i {
+                        color: $clr-white;
+                        transition: $transition-fast;
+                        -webkit-transition: $transition-fast;
+                        -moz-transition: $transition-fast;
+                        -ms-transition: $transition-fast;
+                        -o-transition: $transition-fast;
+
+                        &:hover {
+                            color: $clr-light-blue;
+                        }
+
+                        &:active {
+                            @include click();
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer__bottom {
+        background-color: $clr-black;
+        padding: 0.8rem;
+
+        .container {
+            .footer__wrapper {
+                @include flex-row();
+
+                a {
+                    color: $clr-white-footer;
+                    font-size: $font-size-s;
+                    opacity: 40%;
+                    transition: $transition-fast;
+                    -webkit-transition: $transition-fast;
+                    -moz-transition: $transition-fast;
+                    -ms-transition: $transition-fast;
+                    -o-transition: $transition-fast;
+                    &:hover{
+                        opacity: 80%;
+                    }
+                }
+
+                .right {
+                    display: flex;
+                    column-gap: 1.3rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .footer {
+        margin-top: 8.1rem;
+
+        .footer__top {
+            height: 31.8rem;
+
+            .nav {
+                display: none;
+            }
+
+            .nav-2 {
+                display: block;
+                position: relative;
+
+                .top {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    padding-top: 1rem;
+
+                    .nav-social {
+                        display: flex;
+                        column-gap: 2.3rem;
+
+                        a {
+                            font-size: 2.6rem;
+
+                            i {
+                                color: $clr-white;
+                                transition: $transition-fast;
+                                -webkit-transition: $transition-fast;
+                                -moz-transition: $transition-fast;
+                                -ms-transition: $transition-fast;
+                                -o-transition: $transition-fast;
+
+                                &:hover {
+                                    color: $clr-light-blue;
+                                }
+
+                                &:active {
+                                    @include click();
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .line-footer {
+                    width: 34.4rem;
+                    height: 0.1rem;
+
+                    background-color: $clr-white;
+                    opacity: 22%;
+
+                    position: absolute;
+
+                    top: 6rem;
+                }
+
+                .bottom {
+                    .nav-list {
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 3.5rem;
+
+                        text-align: center;
+
+                        margin-top: 3rem;
+
+                        li {
+                            a {
+                                color: $clr-white;
+                                font-size: $font-size-l;
+                                font-family: "Oswald", sans-serif;
+                                transition: $transition-fast;
+                                text-transform: uppercase;
+                                -webkit-transition: $transition-fast;
+                                -moz-transition: $transition-fast;
+                                -ms-transition: $transition-fast;
+                                -o-transition: $transition-fast;
+
+                                &:hover {
+                                    color: $clr-light-blue;
+                                }
+
+                                &:active {
+                                    @include click();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer__bottom {
+            padding-top: 2.8rem;
+            padding-bottom: 1.3rem;
+
+            .container {
+                .footer__wrapper {
+                    flex-direction: column;
+                    row-gap: 1.7rem;
+
+                    .left,
+                    .right {
+                        display: none;
+                    }
+
+                    .none {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

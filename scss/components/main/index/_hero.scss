@@ -1,0 +1,87 @@
+@import '../../../cta';
+@import '../../../mixins';
+
+.hero {
+    margin-left: 15rem;
+    margin-top: 3.3rem;
+    .hero__wrapper {
+        display: flex;
+        position: relative;
+
+        .hero__left {
+            margin-top: 7rem;
+            .hero__title {
+                font-size: $font-size-xxl;
+                font-family: "Oswald", sans-serif;
+                color: $clr-dark-blue;
+                max-width: 54.7rem;
+                line-height: 6.9rem;
+            }
+
+            .hero__subticle {
+                display: flex;
+                align-items: center;
+                column-gap: 0.8rem;
+
+                width: 21rem;
+                
+                position: relative;
+
+                color: $clr-dark-blue;
+                font-size: $font-size-m;
+
+                margin-top: 3.9rem;
+                margin-bottom: 3.2rem;
+
+                img {
+                    &:first-child {
+                        width: 1.9rem;
+                        height: 2.3rem;
+                    }
+
+                    &:last-child {
+                        position: absolute;
+                        top: 1rem;
+                        right: 0;
+                    }
+                }
+            }
+        }
+        .hero__right{
+            position: absolute;
+            right: 9rem;
+        }
+    }
+}
+@media (max-width: 375px) {
+    .hero{
+        margin-left: 0;
+        .hero__wrapper{
+            flex-direction: column-reverse;
+            .hero__left{
+                margin-top: 0;
+                .hero__title{
+                    font-size: 3.6rem;
+                    max-width: 30rem;
+                    line-height: 4.1rem;
+                }
+                .hero__subticle{
+                    margin-top: 2.9rem;
+                    margin-bottom: 3.3rem;
+                }
+            }
+            .hero__right{
+                top: 21rem;
+                left: 1rem;
+                z-index: -1;
+                width: 29rem;
+                img{
+                    display: none;
+                }
+                .none{
+                    display: block;
+                }
+            }
+        }
+    }
+}

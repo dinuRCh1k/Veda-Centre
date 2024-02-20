@@ -1,0 +1,130 @@
+@import '../../../cta';
+@import '../../../mixins';
+
+.tiger {
+    margin-top: 7.5rem;
+
+    .tiger__grid {
+        margin-top: 3.7rem;
+        display: grid;
+        grid-template-columns: repeat(3, 38rem);
+        grid-gap: 2rem;
+
+        .grid-card {
+            transition: $transition-fast;
+            -webkit-transition: $transition-fast;
+            -moz-transition: $transition-fast;
+            -ms-transition: $transition-fast;
+            -o-transition: $transition-fast;
+
+            &:hover {
+                transform: rotate(-5deg);
+                -webkit-transform: rotate(-5deg);
+                -moz-transform: rotate(-5deg);
+                -ms-transform: rotate(-5deg);
+                -o-transform: rotate(-5deg);
+            }
+
+            &:active {
+                transform: rotate(0);
+                -webkit-transform: rotate(0);
+                -moz-transform: rotate(0);
+                -ms-transform: rotate(0);
+                -o-transform: rotate(0);
+            }
+
+            h2 {
+                padding-left: 1.5rem;
+            }
+
+            h2 {
+                height: 13.4rem;
+
+                color: $clr-dark-blue;
+                font-size: $font-size-x;
+                line-height: 3rem;
+
+                margin-top: 1.4rem;
+            }
+
+            .flex {
+                display: flex;
+                align-items: center;
+                border-top: 0.1rem solid $clr-light-xxxgray;
+                margin-left: 1.5rem;
+                padding-top: 0.5rem;
+
+                p {
+                    color: $clr-black;
+                    font-size: $font-size-s;
+
+                    margin-left: 0.6rem;
+                    margin-right: 7.7rem;
+                }
+
+                h3 {
+                    color: $clr-light-xxgray;
+                    font-size: $font-size-ss;
+
+                    margin-left: 0.5rem;
+                }
+            }
+        }
+    }
+
+    .btn-blue {
+        display: block;
+        width: 19.2rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 3.7rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .tiger {
+        .title {
+            text-align: center;
+
+            span {
+                display: block;
+            }
+        }
+
+        .tiger__grid {
+            margin-top: 3.5rem;
+            grid-template-columns: 35.5rem;
+
+            a {
+                display: none;
+            }
+
+            .none {
+                display: block;
+            }
+
+            .grid-card {
+                h2 {
+                    font-size: 2rem;
+                    line-height: 2.4rem;
+
+                    height: auto;
+                }
+
+                .flex {
+                    margin-top: 1.8rem;
+
+                    p,
+                    h3 {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+
+        .btn-blue {
+            display: flex;
+            width: auto;
+        }
+    }
+}

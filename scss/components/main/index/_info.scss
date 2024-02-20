@@ -1,0 +1,98 @@
+@import '../../../cta';
+@import '../../../mixins';
+
+.info {
+    margin-top: 24rem;
+
+    .info__wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        .info__left {
+            .info__subticle {
+                margin-top: 1.6rem;
+
+                color: $clr-light-gray;
+                font-size: $font-size-l;
+                line-height: 3.4rem;
+
+                max-width: 56.1rem;
+            }
+
+            .info__flex {
+                display: flex;
+                justify-content: space-between;
+
+                .block {
+                    border: 0.1rem solid #002A3726;
+                    border-radius: $radius;
+                    -webkit-border-radius: $radius;
+                    -moz-border-radius: $radius;
+                    -ms-border-radius: $radius;
+                    -o-border-radius: $radius;
+                    padding: 0.6rem 1.1rem;
+                    h4{
+                        columns: $clr-light-blue;
+                        font-weight: 700;
+                        font-size: $font-size-ss;
+                    }
+                    p{
+                        color: $clr-light-xgray;
+                        font-size: $font-size-s;
+                    }
+                }
+            }
+            .info__flex-2{
+                margin-top: 2.2rem;
+
+                display: flex;
+                align-items: center;
+                column-gap: 2.3rem;
+
+                .btn{
+                    color: $clr-light-green;
+                    font-size: $font-size-s;
+
+                    display: flex;
+                    align-items: center;
+                    column-gap: 0.5rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 375px) {
+    .info{
+        margin-top: 42rem;
+        .info__wrapper{
+            flex-direction: column-reverse;
+            .info__left{
+                .title{
+                    text-align: center;
+                    margin-top: 2.6rem;
+                }
+                .info__subticle{
+                    font-size: $font-size-m;
+                }
+                .info__flex{
+                    flex-wrap: wrap;
+                    .block{
+                        &:first-child{
+                            margin-left: 2.7rem;
+                        }
+                        &:last-child{
+                            margin-right: 4.7rem;
+                        }
+                        &:nth-child(3){
+                            margin-left: 4.7rem;
+                        }
+                    }
+                }
+                .info__flex-2{
+                    flex-direction: column;
+                    row-gap: 2.3rem;
+                }
+            }
+        }
+    }
+}

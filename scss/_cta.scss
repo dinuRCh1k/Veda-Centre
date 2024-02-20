@@ -3,12 +3,17 @@ $clr-white: #fff;
 $clr-black: #000;
 
 $clr-light-blue: #00526D;
+$clr-xlight-blue: #006E92;
 $clr-dark-blue: #002A37;
 
 $clr-light-green:#40AC2E;
 $clr-light-gray: #515151;
 $clr-light-xgray:#75736F;
 $clr-light-xxgray:#99AAAF;
+$clr-light-xxxgray: #CCD4D7;
+
+$clr-light-orange: #EF4036;
+$clr-xlight-orange: #FF473D;
 
 $clr-dark-gray-footer: #4D575A;
 $clr-white-footer: #F5F6F7;
@@ -76,6 +81,23 @@ body {
     height: 0.1rem;
     background-color: $clr-dark-blue;
     opacity: 22%;
+
+    margin-top: 9rem;
+    @include respond-to('phone'){
+        margin-top: 3.4rem;
+    }
+}
+
+//Title
+.title{
+    color: $clr-dark-blue;
+    font-family: "Oswald", sans-serif;
+    font-size: $font-size-xl;
+    line-height: 4.3rem;
+    letter-spacing: -2%;
+    @include respond-to('phone'){
+        font-size: 3.6rem;
+    }
 }
 
 // Reset
