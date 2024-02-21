@@ -1,0 +1,92 @@
+@import '../../../cta';
+@import '../../../mixins';
+
+.aside__left {
+    width: 30rem;
+    margin-top: 2.8rem;
+
+    .aside__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            padding-left: 2.2rem;
+            padding-right: 2.2rem;
+            transition: $transition-fast;
+            -webkit-transition: $transition-fast;
+            -moz-transition: $transition-fast;
+            -ms-transition: $transition-fast;
+            -o-transition: $transition-fast;
+
+            &:hover {
+                transform: scale(1.03);
+                -webkit-transform: scale(1.03);
+                -moz-transform: scale(1.03);
+                -ms-transform: scale(1.03);
+                -o-transform: scale(1.03);
+            }
+
+            &:active {
+                transform: scale(1);
+                -webkit-transform: scale(1);
+                -moz-transform: scale(1);
+                -ms-transform: scale(1);
+                -o-transform: scale(1);
+            }
+        }
+
+        h2 {
+            font-size: $font-size-m;
+            text-align: center;
+            color: $clr-dark-blue;
+            font-family: "Oswald", sans-serif;
+
+            margin-top: 1.6rem;
+        }
+
+        p {
+            color: #1F2A2E;
+            line-height: 1.8rem;
+            max-width: 15rem;
+            font-size: $font-size-s;
+
+            margin-top: 1rem;
+        }
+
+        .aside__flex {
+            display: flex;
+            column-gap: 0.5rem;
+
+            margin-top: 1.5rem;
+
+            a {
+                i {
+                    color: #8F96AC;
+                    font-size: $font-size-m;
+
+                    background: #8F96AC14;
+                    padding: 0.4rem 0.7rem;
+                    border-radius: 0.5rem;
+                    -webkit-border-radius: 0.5rem;
+                    -moz-border-radius: 0.5rem;
+                    -ms-border-radius: 0.5rem;
+                    -o-border-radius: 0.5rem;
+                    transition: $transition-fast;
+                    -webkit-transition: $transition-fast;
+                    -moz-transition: $transition-fast;
+                    -ms-transition: $transition-fast;
+                    -o-transition: $transition-fast;
+
+                    &:hover {
+                        color: $clr-light-xgray;
+                    }
+
+                    &:active{
+                        @include click();
+                    }
+                }
+            }
+        }
+    }
+}

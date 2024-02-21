@@ -1,21 +1,11 @@
-@import '../../cta';
-@import '../../mixins';
-
-@keyframes opacity {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 100%;
-    }
-}
+@import '../../../cta';
+@import '../../../mixins';
 
 .header {
     .container {
         .nav {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
 
             margin-top: 0.8rem;
 
@@ -136,18 +126,60 @@
                         }
                     }
                 }
-                
-                .line-header{
-                    width: 65%;
+
+                .line-header {
+                    width: 100%;
                     height: 0.1rem;
                     position: absolute;
                     background-color: $clr-dark-blue;
                     opacity: 22%;
-                    top: 7rem;
-                    @include respond-to('phone'){
+                    top: 6.8rem;
+
+                    @include respond-to('phone') {
                         left: 0;
                         width: 100%;
                         top: 5.5rem;
+                    }
+                }
+            }
+        }
+
+        .nav-2 {
+            margin-top: 0.7rem;
+            margin-left: 14.3rem;
+
+            @include respond-to('phone') {
+                display: none;
+            }
+
+            ul {
+                display: flex;
+                column-gap: 1.1rem;
+
+                li {
+                    font-size: $font-size-sss;
+                    color: $clr-dark-blue;
+
+                    transition: $transition-fast;
+                    -webkit-transition: $transition-fast;
+                    -moz-transition: $transition-fast;
+                    -ms-transition: $transition-fast;
+                    -o-transition: $transition-fast;
+
+                    a {
+                        font-size: $font-size-sss;
+                        color: $clr-dark-blue;
+                        transition: $transition-fast;
+                        -webkit-transition: $transition-fast;
+                        -moz-transition: $transition-fast;
+                        -ms-transition: $transition-fast;
+                        -o-transition: $transition-fast;
+                        &:hover{
+                            color: $clr-light-blue;
+                        }
+                        &:active{
+                            @include click();
+                        }
                     }
                 }
             }
@@ -175,6 +207,7 @@
 
                 .nav-right {
                     margin-left: 0;
+
                     .search {
                         display: none;
                     }
@@ -195,7 +228,7 @@
                         .hamburger-menu {
                             display: none;
 
-                            &:checked ~ .nav-2 {
+                            &:checked~.nav-2 {
                                 display: block;
                                 position: absolute;
                                 left: -1.6rem;
@@ -229,18 +262,21 @@
                                         -moz-transition: $transition-fast;
                                         -ms-transition: $transition-fast;
                                         -o-transition: $transition-fast;
-                                        &:hover{
+
+                                        &:hover {
                                             color: $clr-light-blue;
                                         }
-                                        &:active{
+
+                                        &:active {
                                             @include click();
                                         }
                                     }
                                 }
                             }
-                            
-                            &:checked main,footer{
-                                display: none; 
+
+                            &:checked main,
+                            footer {
+                                display: none;
                             }
                         }
                     }
