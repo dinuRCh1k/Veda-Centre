@@ -144,7 +144,7 @@
             }
         }
 
-        .nav-2 {
+        .nav-3 {
             margin-top: 0.7rem;
             margin-left: 14.3rem;
 
@@ -228,7 +228,7 @@
                         .hamburger-menu {
                             display: none;
 
-                            &:checked~.nav-2 {
+                            &:checked ~ .nav-2 {
                                 display: block;
                                 position: absolute;
                                 left: -1.6rem;
@@ -272,11 +272,6 @@
                                         }
                                     }
                                 }
-                            }
-
-                            &:checked main,
-                            footer {
-                                display: none;
                             }
                         }
                     }

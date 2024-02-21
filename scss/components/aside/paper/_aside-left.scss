@@ -5,6 +5,10 @@
     width: 30rem;
     margin-top: 2.8rem;
 
+    @include respond-to('phone'){
+        display: none;
+    }
+
     .aside__block {
         display: flex;
         flex-direction: column;

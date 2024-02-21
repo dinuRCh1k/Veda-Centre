@@ -1,10 +1,10 @@
 @import '../../../cta';
 @import '../../../mixins';
 
-.tiger {
-    margin-top: 7.5rem;
+.hero {
+    margin-top: 3.5rem;
 
-    .tiger__grid {
+    .hero__grid {
         margin-top: 3.7rem;
         display: grid;
         grid-template-columns: repeat(3, 38rem);
@@ -71,27 +71,17 @@
             }
         }
     }
-
-    .btn-blue {
-        display: block;
-        width: 19.2rem;
+    .btn-blue{
+        margin-top: 4.5rem;
+        width: 21.9rem;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 3.7rem;
     }
 }
 
 @media (max-width: 375px) {
-    .tiger {
-        .title {
-            text-align: center;
-
-            span {
-                display: block;
-            }
-        }
-
-        .tiger__grid {
+    .hero {
+        .hero__grid {
             margin-top: 3.5rem;
             grid-template-columns: 35.5rem;
 
@@ -104,18 +94,17 @@
             }
 
             .grid-card {
-                &:hover{
-                    transform: rotate(0);
-                    -webkit-transform: rotate(0);
-                    -moz-transform: rotate(0);
-                    -ms-transform: rotate(0);
-                    -o-transform: rotate(0);
-}
                 h2 {
                     font-size: 2rem;
                     line-height: 2.4rem;
 
                     height: auto;
+                }
+
+                img{
+                    &:nth-child(1){
+                        width: 33.5rem;
+                    }
                 }
 
                 .flex {
@@ -125,13 +114,19 @@
                     h3 {
                         font-size: 1.1rem;
                     }
+                    img{
+                        width: auto;
+                    }
+                }
+
+                &:hover {
+                    transform: rotate(0);
+                    -webkit-transform: rotate(0);
+                    -moz-transform: rotate(0);
+                    -ms-transform: rotate(0);
+                    -o-transform: rotate(0);
                 }
             }
-        }
-
-        .btn-blue {
-            display: flex;
-            width: auto;
         }
     }
 }

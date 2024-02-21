@@ -2,6 +2,9 @@
 @import '../../../mixins';
 .cd{
     display: flex;
+    @include respond-to('phone'){
+        flex-direction: column;
+    }
 }
 .hero{
     margin-top: 6.7rem;
@@ -30,5 +33,33 @@
     }
     .first{
         width: 100%;
+    }
+}
+@media (max-width: 375px) {
+    .hero{
+        margin-top: 6.1rem;
+        margin-left: 0;
+
+        width: 33.5rem;
+        p{
+            font-size: $font-size-m;
+        }
+        h2{
+            font-size: 2.4rem;
+        }
+        h3{
+            font-size: $font-size-l;
+        }
+        
+        a{
+            display: none;
+        }
+
+        .flex-2{
+            display: flex;
+            a{
+                display: block;
+            }
+        }
     }
 }

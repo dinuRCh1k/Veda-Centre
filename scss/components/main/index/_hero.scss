@@ -50,6 +50,9 @@
         .hero__right{
             position: absolute;
             right: 9rem;
+            img{
+                pointer-events: none;
+            }
         }
     }
 }
